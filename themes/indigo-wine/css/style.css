@@ -1,0 +1,39 @@
+/*
+ Theme Name:   SecondLife
+ Theme URI:    http://preview.hb-themes.com/?theme=Highend
+ Description:  A Flexible, Powerful & Beautiful WordPress Theme by HB-Themes. Mobile ready and optimized for best performance. With the powerful engine and user friendly interface it will allow you to build outstanding websites quick and easy... It comes with Premium Plugins integrated into the theme.
+ Author:       HB-Themes
+ Author URI:   http://www.hb-themes.com
+ Template:     HighendWP
+ Version:      1.0.1
+ Tags:		   Responsive, Page-Builder, Drag&Drop, Clean, Modern, Corporate, Multi-Purpose, Multi-Color
+ Text Domain:  hbthemes
+ */
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'ubuntu';
+}
+#main-wrapper.hb-stretched-layout {
+  background-color: white;
+}
+.m-b-10 {
+  margin-bottom: 10px !important;
+}
+.sf-menu ul {
+  width: 12em;
+}
+.brand-color {
+  color: #eb5757;
+}
+.block {
+  display: block;
+}
+*::selection {
+  background: rgba(104, 204, 236, 0.53);
+}

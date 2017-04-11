@@ -193,5 +193,125 @@ body{
 	}
 }
 
+// Services Sections
+.hexagon {
+  position: relative;
+  width: 100px; 
+  height: 57.74px;
+  background-color: rgba(255, 255, 255, 0);
+  margin: auto;
+  border-left: solid 2px @brand-primary;
+  border-right: solid 2px @brand-primary;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 70.71px;
+  height: 70.71px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 13.6447px;
+}
+
+.hexagon:before {
+  top: -37.3553px;
+  border-top: solid 3.5px @brand-primary;
+  border-right: solid 3.5px @brand-primary;
+}
+
+.hexagon:after {
+  bottom: -37.3553px;
+  border-bottom: solid 3.5px @brand-primary;
+  border-left: solid 3.5px @brand-primary;
+}
+
+.line-grid li {
+  border-right: 1px solid #ccc;
+  position: relative;
+  text-align: center;
+  padding: 60px 0px;
+  	.s-title{
+  		margin-top: 40px;
+  		font-weight: bold;
+  	}
+  	.overlay-box {
+	  display: none;
+	   -webkit-transition: all 1s ease-in-out;
+	  -moz-transition: all 1s ease-in-out;
+	  -o-transition: all 1s ease-in-out;
+	  transition: all 1s ease-in-out;
+	}
+	&:hover{
+		.overlay-box {
+		    background: #fff;
+		    cursor: pointer;
+		    text-align: center;
+		    display: block;
+		    width: 83%;
+		    height: 100%;
+		    position: absolute;
+		    top: -30px;
+		    left: 0px;
+		    padding: 25px;
+		    z-index: 999;
+		    box-shadow: 2px 1px 30px rgba(0, 0, 0, 0.22);
+		    p{
+		    color: #A8A8A8;
+		    }
+		}
+	}
+}
 
 
+@media (max-width: 767px) {
+  .line-grid li:hover .overlay-box {
+    padding: 15px;
+  }
+}
+.line-grid li:hover .overlay-box h3 {
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  .line-grid li:hover .overlay-box h3 {
+    font-size: 13px;
+  }
+}
+.line-grid li:hover .overlay-box a {
+  color: #ccc;
+}
+.line-grid li:nth-child(4) {
+  border-right: 0px;
+}
+.line-grid li:after {
+  margin-top: 1px;
+  content: " ";
+  border-bottom: 1px solid #ccc;
+  background: #00f;
+  width: 78%;
+  position: absolute;
+  bottom: -17px;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .line-grid li:after {
+    bottom: -10px;
+  }
+}
+.alert-dark {
+  background: #E7E7E7;
+}
+.list-inline .alert-dark {
+  height: 140px;
+}
+@media (max-width: 767px) {
+  .list-inline .alert-dark H5 {
+    font-size: 13px;
+  }
+}

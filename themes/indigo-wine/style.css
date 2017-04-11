@@ -334,10 +334,14 @@ body {
   color: #847f76;
   font-size: 1.4em;
 }
+#service-section {
+  background: url(img/transperent-bg.png) repeat-x !important;
+  background-color: #f7f7f7 !important;
+}
 .hexagon {
   position: relative;
-  width: 100px;
-  height: 57.74px;
+  width: 130px;
+  height: 77.74px;
   background-color: rgba(255, 255, 255, 0);
   margin: auto;
   border-left: solid 2px #dbc497;
@@ -348,21 +352,21 @@ body {
   content: "";
   position: absolute;
   z-index: 1;
-  width: 70.71px;
-  height: 70.71px;
+  width: 90.71px;
+  height: 90.71px;
   -webkit-transform: scaleY(0.5774) rotate(-45deg);
   -ms-transform: scaleY(0.5774) rotate(-45deg);
   transform: scaleY(0.5774) rotate(-45deg);
   background-color: inherit;
-  left: 13.6447px;
+  left: 18.6447px;
 }
 .hexagon:before {
-  top: -37.3553px;
+  top: -47.3553px;
   border-top: solid 3.5px #dbc497;
   border-right: solid 3.5px #dbc497;
 }
 .hexagon:after {
-  bottom: -37.3553px;
+  bottom: -47.3553px;
   border-bottom: solid 3.5px #dbc497;
   border-left: solid 3.5px #dbc497;
 }
@@ -370,10 +374,10 @@ body {
   border-right: 1px solid #ccc;
   position: relative;
   text-align: center;
-  padding: 60px 0px;
+  padding: 50px 0px;
 }
 .line-grid li .s-title {
-  margin-top: 40px;
+  margin-top: 60px;
   font-weight: bold;
 }
 .line-grid li .overlay-box {
@@ -398,13 +402,13 @@ body {
 .line-grid li:hover .overlay-box p {
   color: #A8A8A8;
 }
+.line-grid li:hover .overlay-box p a {
+  color: #dbc497;
+}
 @media (max-width: 767px) {
   .line-grid li:hover .overlay-box {
     padding: 15px;
   }
-}
-.line-grid li:hover .overlay-box h3 {
-  color: #ffffff;
 }
 @media (max-width: 767px) {
   .line-grid li:hover .overlay-box h3 {
@@ -433,5 +437,37 @@ body {
   .line-grid li:after {
     bottom: -10px;
   }
+}
+.icn-services {
+  background: url(img/sprite.png) no-repeat;
+  width: 80px !important;
+  height: 80px!important;
+  display: block !important;
+  margin: auto;
+  background-size: 250%;
+}
+.icn-club {
+  background-position: -11px -215px !important;
+}
+.icn-curation {
+  background-position: -105px -215px !important;
+}
+.icn-events {
+  background-position: -11px -315px !important;
+}
+.icn-education {
+  background-position: -105px -307px !important;
+}
+.icn-travel {
+  background-position: -11px -406px !important;
+}
+.icn-corporate {
+  background-position: -105px -408px !important;
+}
+.icn-offers {
+  background-position: -11px -493px !important;
+}
+.icn-distribution {
+  background-position: -99px -493px !important;
 }
 /*# sourceMappingURL=style.css.map */

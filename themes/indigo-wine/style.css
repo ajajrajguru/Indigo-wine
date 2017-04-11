@@ -536,9 +536,86 @@ a[data-readmore-toggle] {
   }
 }
 @media screen and (max-width: 480px) {
+  .why-indigo {
+    text-align: center;
+  }
+  .why-caption {
+    font-size: 1.2em;
+  }
   .why-points .stats .section {
     padding: 0.5em 1em;
   }
+}
+#service-section {
+  background: url(img/transperent-bg.png) repeat-x !important;
+  background-color: #f7f7f7 !important;
+}
+.hexagon {
+  position: relative;
+  width: 130px;
+  height: 77.74px;
+  background-color: rgba(255, 255, 255, 0);
+  margin: auto;
+  border-left: solid 2px #dbc497;
+  border-right: solid 2px #dbc497;
+}
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 90.71px;
+  height: 90.71px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 18.6447px;
+}
+.hexagon:before {
+  top: -47.3553px;
+  border-top: solid 3.5px #dbc497;
+  border-right: solid 3.5px #dbc497;
+}
+.hexagon:after {
+  bottom: -47.3553px;
+  border-bottom: solid 3.5px #dbc497;
+  border-left: solid 3.5px #dbc497;
+}
+.line-grid li {
+  border-right: 1px solid #ccc;
+  position: relative;
+  text-align: center;
+  padding: 50px 0px;
+}
+.line-grid li .s-title {
+  margin-top: 60px;
+  font-weight: bold;
+}
+.line-grid li .overlay-box {
+  display: none;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.line-grid li:hover .overlay-box {
+  background: #fff;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  width: 83%;
+  height: 100%;
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  padding: 25px;
+  z-index: 999;
+  box-shadow: 2px 1px 30px rgba(0, 0, 0, 0.22);
+}
+.line-grid li:hover .overlay-box p {
+  color: #A8A8A8;
+}
+.line-grid li:hover .overlay-box p a {
+  color: #dbc497;
 }
 .why-indigo-row + .without-border {
   background-image: url('img/wineyard.png');
@@ -772,5 +849,88 @@ a[data-readmore-toggle] {
   color: #000;
   font-weight: 600;
   text-decoration: underline;
+}
+@media (max-width: 767px) {
+  .line-grid li:hover .overlay-box {
+    padding: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .line-grid li:hover .overlay-box h3 {
+    font-size: 13px;
+  }
+}
+.line-grid li:hover .overlay-box a {
+  color: #ccc;
+}
+.line-grid li:nth-child(4) {
+  border-right: 0px;
+}
+.line-grid li:after {
+  margin-top: 1px;
+  content: " ";
+  border-bottom: 1px solid #ccc;
+  background: #00f;
+  width: 78%;
+  position: absolute;
+  bottom: -17px;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .line-grid li:after {
+    bottom: -10px;
+  }
+}
+.icn-services {
+  background: url(img/sprite.png) no-repeat;
+  width: 80px !important;
+  height: 80px!important;
+  display: block !important;
+  margin: auto;
+  background-size: 250%;
+}
+.icn-club {
+  background-position: -11px -215px !important;
+}
+.icn-curation {
+  background-position: -105px -215px !important;
+}
+.icn-events {
+  background-position: -11px -315px !important;
+}
+.icn-education {
+  background-position: -105px -307px !important;
+}
+.icn-travel {
+  background-position: -11px -406px !important;
+}
+.icn-corporate {
+  background-position: -105px -408px !important;
+}
+.icn-offers {
+  background-position: -11px -493px !important;
+}
+.icn-distribution {
+  background-position: -99px -493px !important;
+}
+#hb-page-title {
+  padding-top: 100px;
+  margin-top: 0;
+}
+.hb-animate-element {
+  opacity: 1;
+}
+.woocommerce-page #main-content {
+  margin-top: 0px;
+}
+.woocommerce .wc-new-badge {
+  background: #002b4e !important;
+}
+.woocommerce .hb-more-details:hover,
+.woocommerce .hb-buy-button:hover {
+  color: #FFF;
+  background: #dbc497;
 }
 /*# sourceMappingURL=style.css.map */

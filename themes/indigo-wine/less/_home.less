@@ -25,6 +25,9 @@ body{
 
 #main-content{
 	margin-top: 4em;
+	@media screen and (max-width: 1400px){
+		margin-top: 2em;
+	}
 }
 
 .ind-custom-menu{
@@ -53,6 +56,8 @@ body{
 		flex: 1 0 40%;
 		ul{
 			display: flex;
+			position: relative;
+    		top: 5px; 
 			li{
 				padding: 0 1.5em;
 				a{
@@ -108,13 +113,50 @@ body{
     		img{
 				display: none !important;
     		}
+    		.hb-visible-logo img.default,.hb-visible-logo img.retina{
+    			display: none !important;
+    		}
     	}
     	.col{
     		padding: 0;
+    		ul{
+    			top: 0
+    		}
     	}
 	}
 }
 
+
+@media screen and (max-width: 1400px){
+	.ind-custom-menu{
+	   	background-position: 13.3% 2px;
+		.col{
+			ul{
+				position: relative;
+    			top: 10px; 
+				li{
+					padding: 0 1em;
+				}
+			}
+		}
+		&.fixed{
+			background-position: 13.5% -5px;
+			.col{
+				ul{
+					top: 0
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1300px){
+	.ind-custom-menu{
+		&.fixed{
+			background-position: 13.5% 0px;
+		}
+	}
+}
 
 // ---------------------------
 // BANNER -----------

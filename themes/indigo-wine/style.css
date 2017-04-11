@@ -30,6 +30,11 @@ body {
 #main-content {
   margin-top: 4em;
 }
+@media screen and (max-width: 1400px) {
+  #main-content {
+    margin-top: 2em;
+  }
+}
 .ind-custom-menu {
   display: -webkit-box;
   display: -webkit-flex;
@@ -74,6 +79,8 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  top: 5px;
 }
 .ind-custom-menu .col ul li {
   padding: 0 1.5em;
@@ -140,8 +147,38 @@ body {
 .ind-custom-menu.fixed #logo img {
   display: none !important;
 }
+.ind-custom-menu.fixed #logo .hb-visible-logo img.default,
+.ind-custom-menu.fixed #logo .hb-visible-logo img.retina {
+  display: none !important;
+}
 .ind-custom-menu.fixed .col {
   padding: 0;
+}
+.ind-custom-menu.fixed .col ul {
+  top: 0;
+}
+@media screen and (max-width: 1400px) {
+  .ind-custom-menu {
+    background-position: 13.3% 2px;
+  }
+  .ind-custom-menu .col ul {
+    position: relative;
+    top: 10px;
+  }
+  .ind-custom-menu .col ul li {
+    padding: 0 1em;
+  }
+  .ind-custom-menu.fixed {
+    background-position: 13.5% -5px;
+  }
+  .ind-custom-menu.fixed .col ul {
+    top: 0;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .ind-custom-menu.fixed {
+    background-position: 13.5% 0px;
+  }
 }
 .banner-row .vc_col-sm-12 {
   padding: 0;

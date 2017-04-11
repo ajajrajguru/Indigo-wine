@@ -470,4 +470,22 @@ body {
 .icn-distribution {
   background-position: -99px -493px !important;
 }
+#hb-page-title {
+  padding-top: 100px;
+  margin-top: 0;
+}
+.hb-animate-element {
+  opacity: 1;
+}
+.woocommerce-page #main-content {
+  margin-top: 0px;
+}
+.woocommerce .wc-new-badge {
+  background: #002b4e !important;
+}
+.woocommerce .hb-more-details:hover,
+.woocommerce .hb-buy-button:hover {
+  color: #FFF;
+  background: #dbc497;
+}
 /*# sourceMappingURL=style.css.map */

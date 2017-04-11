@@ -17,23 +17,193 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'ubuntu';
+  font-family: "Lato", "sans-serif";
 }
-#main-wrapper.hb-stretched-layout {
-  background-color: white;
+body {
+  font-weight: 600 !important;
 }
-.m-b-10 {
-  margin-bottom: 10px !important;
+#header-inner-bg {
+  border: 0;
+  background-color: transparent;
+  min-height: 140px;
 }
-.sf-menu ul {
-  width: 12em;
+#main-content {
+  margin-top: 4em;
 }
-.brand-color {
-  color: #eb5757;
+.ind-custom-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5em 15px;
+  background-image: url('img/bg-repeat.jpg');
+  background-size: 5%;
+  background-position: 13.3% 1px;
 }
-.block {
+.ind-custom-menu #logo {
+  max-width: initial !important;
+  height: auto !important;
+  float: none;
+  display: inline-block;
+  position: relative;
+  top: -5px;
+}
+.ind-custom-menu #logo img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+.ind-custom-menu .col {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 40%;
+      -ms-flex: 1 0 40%;
+          flex: 1 0 40%;
+}
+.ind-custom-menu .col ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.ind-custom-menu .col ul li {
+  padding: 0 1.5em;
+}
+.ind-custom-menu .col ul li a {
+  color: #dbc497;
+  font-size: 1.2em;
+}
+.ind-custom-menu .col ul li a:after {
+  content: "";
+  position: relative;
+  top: -22px;
   display: block;
+  margin: 0 auto;
+  width: 0;
+  height: 2px;
+  background-color: #dbc497;
+  -webkit-transition: opacity .3s ease,width .3s ease;
+  transition: opacity .3s ease,width .3s ease;
 }
-*::selection {
-  background: rgba(104, 204, 236, 0.53);
+.ind-custom-menu .col ul li a:hover:after {
+  width: 100%;
 }
+.ind-custom-menu .col-left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 1em;
+}
+.ind-custom-menu .col-center {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 20%;
+      -ms-flex: 1 0 20%;
+          flex: 1 0 20%;
+  text-align: center;
+}
+.ind-custom-menu .col-right {
+  padding-left: 1em;
+}
+.ind-custom-menu.fixed {
+  position: fixed;
+  width: calc(100% - 30px);
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-position: 13.3% -13px;
+}
+.ind-custom-menu.fixed #logo {
+  height: 84px !important;
+  background-repeat: no-repeat;
+  background-image: url('img/logo-half.png');
+  display: block;
+  background-position: center;
+  background-size: 90%;
+}
+.ind-custom-menu.fixed #logo img {
+  display: none !important;
+}
+.ind-custom-menu.fixed .col {
+  padding: 0;
+}
+.banner-row .vc_col-sm-12 {
+  padding: 0;
+}
+.owl-carousel .item {
+  position: relative;
+}
+.owl-carousel .banner-caption {
+  position: absolute;
+  bottom: -3em;
+  width: 300px;
+  text-align: left;
+  left: 8em;
+  background-color: #dbc497;
+  padding: 1.5em;
+  padding-bottom: 5em;
+}
+.owl-carousel .banner-caption .msg {
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.owl-carousel .owl-wrapper-outer {
+  overflow: visible !important;
+}
+.owl-controls .owl-pagination {
+  position: absolute;
+  left: 9em;
+}
+.owl-controls .owl-pagination .owl-page.owl-page span {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  background-color: #ba9346;
+  width: 12px;
+  height: 8px;
+  border-radius: inherit;
+}
+.owl-controls .owl-pagination .owl-page.owl-page span:after {
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+.owl-controls .owl-pagination .owl-page.owl-page span:before {
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+.owl-controls .owl-pagination .owl-page.owl-page.active span {
+  background-color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

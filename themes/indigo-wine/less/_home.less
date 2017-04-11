@@ -11,6 +11,31 @@ body{
 	font-weight: 600 !important;
 }
 
+.row.row-gap{
+	margin: 4em 0;
+}
+
+// default button
+
+.brand-button{
+	.vc_btn3.vc_btn3-color-grey.vc_general{
+		background-color: @brand-secondary;
+	    color: #fff;
+	    font-weight: 600;
+	    font-family: roboto;
+	    font-size: 1.4em;
+	    border: 0;
+	    background-image: none;
+	    border-radius: 4px;
+	    padding: 0.8em 1.8em;
+	    letter-spacing: 0.5px;
+	    &:hover{
+	    	background-color: lighten(@brand-secondary,5%);
+	    	color: #fff;
+	    }
+	}
+}
+
 
 // ---------------------------
 // NAVIGATION -----------
@@ -25,6 +50,9 @@ body{
 
 #main-content{
 	margin-top: 4em;
+	@media screen and (max-width: 1400px){
+		margin-top: 2em;
+	}
 }
 
 .ind-custom-menu{
@@ -53,6 +81,8 @@ body{
 		flex: 1 0 40%;
 		ul{
 			display: flex;
+			position: relative;
+    		top: 5px; 
 			li{
 				padding: 0 1.5em;
 				a{
@@ -108,17 +138,61 @@ body{
     		img{
 				display: none !important;
     		}
+    		.hb-visible-logo img.default,.hb-visible-logo img.retina{
+    			display: none !important;
+    		}
     	}
     	.col{
     		padding: 0;
+    		ul{
+    			top: 0
+    		}
     	}
 	}
 }
 
 
+@media screen and (max-width: 1400px){
+	.ind-custom-menu{
+	   	background-position: 13.3% 2px;
+		.col{
+			ul{
+				position: relative;
+    			top: 10px; 
+				li{
+					padding: 0 1em;
+				}
+			}
+		}
+		&.fixed{
+			background-position: 13.5% -5px;
+			.col{
+				ul{
+					top: 0
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1300px){
+	.ind-custom-menu{
+		&.fixed{
+			background-position: 13.5% 0px;
+		}
+	}
+}
+
 // ---------------------------
 // BANNER -----------
 // ---------------------------
+
+.row.banner-entry{
+	margin: 0;
+	& + .without-border{
+		z-index: 1;
+	}
+}
 
 .banner-row{
 	.vc_col-sm-12{
@@ -135,7 +209,7 @@ body{
 	    bottom: -3em;
 	    width: 300px;
 	    text-align: left;
-	    left: 8em;
+	    left: 15em;
 	    background-color: @brand-primary;
 	    padding: 1.5em;
 	    padding-bottom: 5em;
@@ -155,7 +229,7 @@ body{
 .owl-controls{
 	.owl-pagination{
 		position: absolute;
-    	left: 9em;
+    	left: 16em;
 		.owl-page.owl-page{
 			span{
 				position: relative;
@@ -190,6 +264,104 @@ body{
 				}
 			}
 		}
+	}
+	.owl-buttons{
+		display: none;
+	}
+}
+
+
+// ---------------------------
+// PATTERN -----------
+// ---------------------------
+
+
+.pattern-bg{
+	background-image: url('./img/transperent-bg.png');
+	min-height: 160px;
+    margin-top: -3em;
+}
+
+
+
+// ---------------------------
+// ABOUT-US -----------
+// ---------------------------
+
+.row.about-row{
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+.site-title{
+	font-size: 2.6em;
+    font-weight: 600;
+    color: @brand-secondary;
+    letter-spacing: 1.5px;
+    &:first-letter{
+    	border-bottom: 3px solid @brand-primary;
+    }
+}
+
+
+.about-us{
+	.about-data{
+		font-size: 1.85em;
+	    font-weight: 400;
+	    line-height: 1.35;
+	    color: @brand-primary;
+	}
+}
+
+
+.about-details{
+	font-weight: 500;
+    font-size: 1.3em;
+    line-height: 1.5;
+    font-family: roboto;
+}
+
+
+
+// ---------------------------
+// DELIGHT -----------
+// ---------------------------
+
+.row.delight-row{
+	margin: 3em 0;
+}
+
+.aboutDetails{
+	& + .without-border{
+		background-color: #f3ecdc;
+    	padding-top: 0.5em;
+    	padding-bottom: 0.2em;
+    	&:after,&:before{
+    		content: '';
+    		display: block;
+		    position: absolute;
+		    bottom: 1.5em;
+		    height: 2px;
+		    background-color: #efe2cb;
+		    width: 100%;
+		    left: 0;
+    	}
+    	&:before{
+    		top: 1.5em;
+    		bottom: inherit;
+    	}
+	}
+}
+.delight{
+	&__title{
+		color: @brand-secondary;
+    	font-size: 2.4em;
+    	line-height: 1.2;
+    	letter-spacing: 1px;
+	}
+	&__caption{
+		color: #847f76;
+    	font-size: 1.4em;
 	}
 }
 
@@ -304,14 +476,4 @@ body{
     bottom: -10px;
   }
 }
-.alert-dark {
-  background: #E7E7E7;
-}
-.list-inline .alert-dark {
-  height: 140px;
-}
-@media (max-width: 767px) {
-  .list-inline .alert-dark H5 {
-    font-size: 13px;
-  }
-}
+

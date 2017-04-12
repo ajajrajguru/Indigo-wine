@@ -146,6 +146,26 @@
                     </div>
                 </div>
 
+                <div class="indigo-m-menu">
+                    <div class="col top">
+                      <i class="fa fa-bars" aria-hidden="true"></i>
+                      <span class="site-logo"></span>
+                    </div>
+                    <div class="col bottom">
+                        <?php
+                        wp_nav_menu( array( 
+                            'theme_location' => 'my-custom-menu', 
+                            'container_class' => 'custom-menu-class' ) ); 
+                        ?>
+                        <?php
+                        wp_nav_menu( array( 
+                            'theme_location' => 'my-custom-menuu', 
+                            'container_class' => 'custom-menu-class' ) ); 
+                        ?>
+                    </div>
+                </div>
+
+
                 <!-- BEGIN .container or .container-wide -->
                 <div class="hidden <?php if ( $header_layout_class == 'nav-type-1 nav-type-4' ) { echo 'container'; } else { echo $main_header_container; } ?>">
                     

@@ -38,6 +38,9 @@ body{
 	    padding-left: 15px!important;
 	    padding-right: 15px!important;
 	}
+	.vc_row .vc_col-sm-12{
+		padding: 0;
+	}
 }
 
 // default button
@@ -620,6 +623,7 @@ a[data-readmore-toggle]{
 		.stats{
 			.section{
 				padding: 0.5em 1em;
+				flex: 1 0 calc(~'100% - 2em');
 			}
 		}
 	}
@@ -854,6 +858,64 @@ a[data-readmore-toggle]{
 
 
 
+
+@media screen and (max-width: 767px){
+	.our-wine{
+		.timeline{
+			flex-direction: column;
+	    	align-items: baseline;
+	    	margin: 2em 5em;
+	    	li{
+	    		display: flex;
+	    		width: 100%;
+	    		.dot{
+				    margin-left: 0;
+	    			margin-right: 0;
+	    		}
+	    	}
+	    	&__text{
+	    		padding-left: 0.5em;
+	    		font-size: 1.2em;
+	    	}
+	    	&:before{
+	    		content: '';
+	    		width: 2px;
+	    		top: 0.5em;
+	    		height: 100%;
+	    		left: 6px;
+	    	}
+		}
+	}
+
+	.why-wines{
+	    margin-top: 3em;
+	    .points{
+	    	flex-direction: column;
+	    	ul{
+	    		&.left{
+	    			padding-left: 0;	
+	    		}
+	    		li{
+	    			align-items: baseline;
+	    			.reason{
+	    				font-size: 1.15em;
+	    			}
+	    		}
+	    	}
+	    }
+	}
+}
+
+@media screen and (min-width: 650px) and (max-width: 767px){
+	.why-wines{
+	    .points{
+	    	flex-direction: row;
+	    }
+	}
+}
+	
+
+
 // ---------------------------
 // TRADE -----------
 // ---------------------------
@@ -940,6 +1002,30 @@ a[data-readmore-toggle]{
 }
 
 
+@media screen and (max-width: 600px){
+	.trade{
+		&-banner{
+	    	.service.service{
+    		    width: 75%;
+			    position: relative;
+			    top: 3em;
+			    margin-bottom: 5em;
+			    .title{
+	    			font-size: 1.5em;
+    			}
+	    		.lists{
+	    			li{
+	    				font-size: 1.15em;
+	    			}
+	    		}
+	    	}
+		}
+	}
+	.pricelist{
+    	bottom: 0;
+	}
+}
+
 
 // ---------------------------
 // LOGO CAROUSEL -----------
@@ -1002,6 +1088,16 @@ a[data-readmore-toggle]{
 		color: @brand-secondary;
 		opacity: 0.8;
     }
+}
+
+
+@media screen and (max-width: 500px){
+	.logoCarousel{
+		.owl-theme .owl-controls .owl-buttons{
+		    width: calc(~'100% + 4em');
+	    	left: -2em;
+		}
+	}
 }
 
 
@@ -1174,6 +1270,71 @@ a[data-readmore-toggle]{
 	display: none;
 }
 
+
+
+@media screen and (max-width: 991px){
+	.contact-us{
+		.contactForm{
+			margin: 3em 0;
+    		padding: 1em;
+		}
+		.form-field{
+	    	width: 100%;
+	    	label{
+	    		padding-left: 0;
+	    	}
+		}
+		.field-combo{
+			flex-direction: column;
+	    	& > label{
+	    		padding: 0;
+	    	}
+	    	.email{
+				margin-right: 0;
+				width: 100%;
+			}
+			.contact{
+				margin-left: 0;
+				width: 100%;
+	    	}
+		}
+		input[type='submit']{
+			display: block;
+    		margin: 0 auto;
+    		font-size: 1em;
+		}
+		.contact-card{
+			position: static;
+    		width: auto;
+		    .why-caption{
+	    		font-size: 1.05em;
+		    }
+		}
+	}
+	.contact-footer{
+		flex-direction: column;
+    	margin: 0;
+    	align-items: baseline;
+		& > div{
+			margin: 1em 0;
+		}
+		.data{
+			color: @brand-primary;
+			font-family: roboto;
+			font-size: 1.1em;
+		}
+	}	
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+	.contact-footer{
+		.con-icon{
+			height: 34px;
+		    width: 34px;
+		}
+	}
+}
 
 
 // ---------------------------

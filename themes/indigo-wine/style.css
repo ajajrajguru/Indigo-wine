@@ -40,6 +40,9 @@ body {
     padding-left: 15px!important;
     padding-right: 15px!important;
   }
+  .vc_row .vc_col-sm-12 {
+    padding: 0;
+  }
 }
 .brand-button .vc_btn3.vc_btn3-color-grey.vc_general {
   background-color: #022c4c;
@@ -578,6 +581,10 @@ a[data-readmore-toggle] {
   }
   .why-points .stats .section {
     padding: 0.5em 1em;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 calc(100% - 2em);
+        -ms-flex: 1 0 calc(100% - 2em);
+            flex: 1 0 calc(100% - 2em);
   }
 }
 #service-section {
@@ -804,6 +811,73 @@ a[data-readmore-toggle] {
   text-align: center;
   margin: 0 auto;
 }
+@media screen and (max-width: 767px) {
+  .our-wine .timeline {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin: 2em 5em;
+  }
+  .our-wine .timeline li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .our-wine .timeline li .dot {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .our-wine .timeline__text {
+    padding-left: 0.5em;
+    font-size: 1.2em;
+  }
+  .our-wine .timeline:before {
+    content: '';
+    width: 2px;
+    top: 0.5em;
+    height: 100%;
+    left: 6px;
+  }
+  .why-wines {
+    margin-top: 3em;
+  }
+  .why-wines .points {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .why-wines .points ul.left {
+    padding-left: 0;
+  }
+  .why-wines .points ul li {
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .why-wines .points ul li .reason {
+    font-size: 1.15em;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 767px) {
+  .why-wines .points {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 .row.trade-sperator {
   margin: 0;
 }
@@ -896,6 +970,23 @@ a[data-readmore-toggle] {
   font-weight: 600;
   text-decoration: underline;
 }
+@media screen and (max-width: 600px) {
+  .trade-banner .service.service {
+    width: 75%;
+    position: relative;
+    top: 3em;
+    margin-bottom: 5em;
+  }
+  .trade-banner .service.service .title {
+    font-size: 1.5em;
+  }
+  .trade-banner .service.service .lists li {
+    font-size: 1.15em;
+  }
+  .pricelist {
+    bottom: 0;
+  }
+}
 .logoCarousel {
   position: relative;
 }
@@ -959,6 +1050,12 @@ a[data-readmore-toggle] {
   font-style: italic;
   color: #022c4c;
   opacity: 0.8;
+}
+@media screen and (max-width: 500px) {
+  .logoCarousel .owl-theme .owl-controls .owl-buttons {
+    width: calc(100% + 4em);
+    left: -2em;
+  }
 }
 .row.contact-from-row {
   margin: 0;
@@ -1147,6 +1244,74 @@ a[data-readmore-toggle] {
 }
 #footer {
   display: none;
+}
+@media screen and (max-width: 991px) {
+  .contact-us .contactForm {
+    margin: 3em 0;
+    padding: 1em;
+  }
+  .contact-us .form-field {
+    width: 100%;
+  }
+  .contact-us .form-field label {
+    padding-left: 0;
+  }
+  .contact-us .field-combo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-us .field-combo > label {
+    padding: 0;
+  }
+  .contact-us .field-combo .email {
+    margin-right: 0;
+    width: 100%;
+  }
+  .contact-us .field-combo .contact {
+    margin-left: 0;
+    width: 100%;
+  }
+  .contact-us input[type='submit'] {
+    display: block;
+    margin: 0 auto;
+    font-size: 1em;
+  }
+  .contact-us .contact-card {
+    position: static;
+    width: auto;
+  }
+  .contact-us .contact-card .why-caption {
+    font-size: 1.05em;
+  }
+  .contact-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .contact-footer > div {
+    margin: 1em 0;
+  }
+  .contact-footer .data {
+    color: #dbc497;
+    font-family: roboto;
+    font-size: 1.1em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .contact-footer .con-icon {
+    height: 34px;
+    width: 34px;
+  }
 }
 #copyright-wrapper {
   background-color: #002b4e;

@@ -342,6 +342,9 @@ body {
   line-height: 1.35;
   color: #dbc497;
 }
+.row.aboutDetails {
+  margin-top: 4em;
+}
 .about-details {
   font-weight: 500;
   font-size: 1.3em;
@@ -479,9 +482,10 @@ a[data-readmore-toggle] {
 }
 .why-points .stats .section .why-icon {
   background-image: url('img/sprite.png');
-  height: 110px;
-  width: 112px;
+  height: 80px;
+  width: 80px;
   margin: 0 auto;
+  background-size: 210px;
   background-repeat: no-repeat;
 }
 .why-points .stats .section .why-icon.quality {
@@ -849,6 +853,88 @@ a[data-readmore-toggle] {
   color: #000;
   font-weight: 600;
   text-decoration: underline;
+}
+.row.contact-from-row {
+  margin: 0;
+}
+.row.contact-from-row + .without-border {
+  background-color: #002b4e;
+  color: #fff;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.contact-us .site-title,
+.contact-us .contact-caption {
+  color: #fff;
+}
+.contact-us .contactForm {
+  margin: 5em 6em 0 6em;
+  border: 2px solid #dbc497;
+  padding: 1em 3em;
+}
+.contact-us .form-field {
+  margin-bottom: 2.5em;
+  width: 75%;
+}
+.contact-us .form-field:last-child {
+  margin-bottom: 0;
+}
+.contact-us .form-field input {
+  border: 0;
+  border-bottom: 2px solid #cdbb93;
+  background-color: transparent;
+  font-size: 1.15em;
+  font-weight: 600;
+  font-family: roboto;
+  color: #fff;
+  width: 100%;
+  padding-left: 0 !important;
+}
+.contact-us .field-combo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact-us .field-combo > label {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.contact-us .field-combo .email {
+  margin-right: 0.5em;
+}
+.contact-us .field-combo .contact {
+  margin-left: 0.5em;
+}
+.contact-us .field-combo .contact input[type='number'] {
+  padding: 15px 12px 10px;
+}
+.contact-us input[type='submit'] {
+  margin-left: 15px;
+  background-color: #dbc497;
+  box-shadow: none;
+  padding: 1em 3em !important;
+  border-radius: 4px;
+  font-family: roboto;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.contact-us input[type='submit']:active {
+  top: 0 !important;
+}
+.contact-us input.wpcf7-not-valid {
+  border: 0 !important;
+  border-bottom: 2px solid #f00 !important;
 }
 @media (max-width: 767px) {
   .line-grid li:hover .overlay-box {

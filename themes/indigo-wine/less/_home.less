@@ -356,6 +356,10 @@ body{
 }
 
 
+.row.aboutDetails{
+	margin-top: 4em;
+}
+
 .about-details{
 	font-weight: 500;
     font-size: 1.3em;
@@ -493,9 +497,10 @@ a[data-readmore-toggle]{
     		transition: all 0.5s ease;
 			.why-icon{
 				background-image: url('./img/sprite.png');
-				height: 110px;
-    			width: 112px;
+				height: 80px;
+    			width: 80px;
     			margin: 0 auto;
+    			background-size: 210px;
     			background-repeat: no-repeat;
     			&.quality{
     				background-position: 9% 4%;
@@ -877,6 +882,90 @@ a[data-readmore-toggle]{
    		}
     }
 }
+
+
+
+// ---------------------------
+// CONTACT US -----------
+// ---------------------------
+
+
+.row.contact-from-row{
+	margin: 0;
+	& + .without-border{
+		background-color: #002b4e;
+    	color: #fff;
+    	padding-top: 2em;
+    	padding-bottom: 2em;
+	}
+}
+
+.contact-us{
+	.site-title,.contact-caption{
+		color: #fff;
+	}
+	.contactForm{
+		margin: 5em 6em 0 6em;
+    	border: 2px solid @brand-primary;
+    	padding: 1em 3em;
+	}
+	.form-field{
+		margin-bottom: 2.5em;
+    	width: 75%;
+    	&:last-child{
+    		margin-bottom: 0;
+    	}
+    	input{
+    		border: 0;
+    		border-bottom: 2px solid #cdbb93;
+    		background-color: transparent;
+    		font-size: 1.15em;
+    		font-weight: 600;
+    		font-family: roboto;
+    		color: #fff;
+    		width: 100%;
+    		padding-left: 0 !important;
+    	}
+	}
+	.field-combo{
+		display: flex;
+    	align-items: center;
+    	justify-content: space-between;
+    	& > label{
+    		flex: 1;
+    	}
+    	.email{
+			margin-right: 0.5em;
+		}
+		.contact{
+			margin-left: 0.5em;
+			input[type='number']{
+				padding: 15px 12px 10px;
+			}
+    	}
+	}
+	input[type='submit']{
+		margin-left: 15px;
+    	background-color: @brand-primary;
+    	box-shadow: none;
+    	padding: 1em 3em !important;
+    	border-radius: 4px;
+    	font-family: roboto;
+    	font-size: 1.1em;
+    	font-weight: 600;
+    	&:active{
+    		top: 0 !important;
+    	}
+	}
+	input.wpcf7-not-valid{
+		border: 0 !important;
+		border-bottom: 2px solid #f00 !important;
+	}
+}
+
+
+
+
 
 
 

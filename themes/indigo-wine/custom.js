@@ -17,9 +17,10 @@ jQuery(window).scroll(function(){
   
 });
 
-var owl = jQuery('.owl-carousel').data('owlCarousel');
+if(jQuery('.owl-carousel').length){
+    var owl = jQuery('.owl-carousel').data('owlCarousel');
 	owl.destroy();
-
+}
 
 function slideCarousel(){
 	var owl = jQuery('.owl-carousel').data('owlCarousel');
@@ -60,3 +61,19 @@ setTimeout(slideCarousel, 1000);
 
 
 }).call(this);
+
+jQuery(document).ready(function() {
+jQuery("#toggleButton").click( function(event){
+     event.preventDefault();
+     if (jQuery(this).hasClass("isDown") ) {
+     // $( ".navbar-fixed-top" ).animate({ "margin-top": "-62px" }, "fast" );
+     jQuery( ".hb-sidebar" ).animate({ "left": "0px" }, "fast" );
+     jQuery(this).removeClass("isDown");
+     } else {
+     // $( ".navbar-fixed-top" ).animate({ "margin-top": "0px" }, "fast" );
+     jQuery( ".hb-sidebar" ).animate({ "left": "-780px" }, "fast" );
+     jQuery(this).addClass("isDown");
+     }
+     return false;
+     });   
+});

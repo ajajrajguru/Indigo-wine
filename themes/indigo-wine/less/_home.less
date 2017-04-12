@@ -23,6 +23,23 @@ body{
 	font-family: 'roboto';
 }
 
+#main-content .col-12.hb-main-content{
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+#main-wrapper.hb-stretched-layout{
+	background-color: #fff;
+}
+
+
+@media handheld, only screen and (max-width: 767px){
+	.container.container {
+	    padding-left: 15px!important;
+	    padding-right: 15px!important;
+	}
+}
+
 // default button
 
 .brand-button{
@@ -209,77 +226,80 @@ body{
 	.vc_col-sm-12{
 		padding: 0;
 	}
-}
 
-.owl-carousel{
-	.item{
-		position: relative;
+	.owl-carousel{
+		.item{
+			position: relative;
+		}
+		.banner-caption{
+			position: absolute;
+		    bottom: -3em;
+		    width: 300px;
+		    text-align: left;
+		    left: 15em;
+		    background-color: @brand-primary;
+		    padding: 1.5em;
+		    padding-bottom: 5em;
+		    .msg{
+				color: #fff;
+	    		font-size: 2.5em;
+	    		font-weight: 500;
+	    		line-height: 1.3;
+		    }
+		}
+		.owl-wrapper-outer{
+			overflow: visible !important;
+		}
 	}
-	.banner-caption{
-		position: absolute;
-	    bottom: -3em;
-	    width: 300px;
-	    text-align: left;
-	    left: 15em;
-	    background-color: @brand-primary;
-	    padding: 1.5em;
-	    padding-bottom: 5em;
-	    .msg{
-			color: #fff;
-    		font-size: 2.5em;
-    		font-weight: 500;
-    		line-height: 1.3;
-	    }
-	}
-	.owl-wrapper-outer{
-		overflow: visible !important;
-	}
-}
 
-
-.owl-controls{
-	.owl-pagination{
-		position: absolute;
-    	left: 16em;
-		.owl-page.owl-page{
-			span{
-				position: relative;
-			    display: inline-block;
-			    margin: 0 5px;
-			    background-color: #ba9346;
-			    width: 12px;
-			    height: 8px;
-			    border-radius: inherit;
-				&:after{
-				  width: inherit;
-				  height: inherit;
-				  background-color: inherit;
-				  content: "";
-				  position: absolute;
-				  left: 0;
-				  transform: rotate(60deg);
-				}
-				&:before{
-				  width: inherit;
-				  height: inherit;
-				  background-color: inherit;
-				  content: "";
-				  position: absolute;
-				  left: 0;
-				  transform: rotate(-60deg);
-				}
-			}
-			&.active{
+	.owl-controls{
+		.owl-pagination{
+			position: absolute;
+	    	left: 16em;
+			.owl-page.owl-page{
 				span{
-					background-color: #fff;
+					position: relative;
+				    display: inline-block;
+				    margin: 0 5px;
+				    background-color: #ba9346;
+				    width: 12px;
+				    height: 8px;
+				    border-radius: inherit;
+					&:after{
+					  width: inherit;
+					  height: inherit;
+					  background-color: inherit;
+					  content: "";
+					  position: absolute;
+					  left: 0;
+					  transform: rotate(60deg);
+					}
+					&:before{
+					  width: inherit;
+					  height: inherit;
+					  background-color: inherit;
+					  content: "";
+					  position: absolute;
+					  left: 0;
+					  transform: rotate(-60deg);
+					}
+				}
+				&.active{
+					span{
+						background-color: #fff;
+					}
 				}
 			}
 		}
+		.owl-buttons{
+			display: none;
+		}
 	}
-	.owl-buttons{
-		display: none;
-	}
+
+
 }
+
+
 
 .social-link{
 	position: absolute;
@@ -360,6 +380,11 @@ body{
 	margin-top: 4em;
 }
 
+.row.about-second-row{
+	margin-top: 2em;
+	margin-bottom: 0;
+}
+
 .about-details{
 	font-weight: 500;
     font-size: 1.3em;
@@ -371,6 +396,25 @@ body{
 a[data-readmore-toggle]{
 	font-size: 1.2em;
     color: #022c4c;
+}
+
+
+@media screen and (max-width: 500px){
+	.about-us{
+		.about-data{
+			font-size: 1.5em;
+			line-height: 1.4;
+		}
+	}
+	.about-details{
+		.data{
+			font-size: 0.9em;
+		}
+	}
+	a[data-readmore-toggle]{
+		font-size: 1em;
+		margin-top: 0.5em
+	}
 }
 
 
@@ -503,16 +547,16 @@ a[data-readmore-toggle]{
     			background-size: 210px;
     			background-repeat: no-repeat;
     			&.quality{
-    				background-position: 9% 4%;
+    				background-position: 9% 2.5%;
     			}
     			&.relation{
-    				background-position: 86% 4%;
+    				background-position: 86% 2%;
     			}
     			&.passion{
-    				background-position: 9% 22%;
+    				background-position: 9% 13%;
     			}
     			&.conv{
-    				background-position: 85% 22%;
+    				background-position: 85% 12.5%;
     			}
 			}
 			.iconTitle{
@@ -844,7 +888,7 @@ a[data-readmore-toggle]{
     	background-image: url('./img/trade-image.png');
     	padding: 4em 0;
     	.service{
-    		width: 500px;
+    		width: 400px;
     		padding: 1.5em;
     		background-color: #fff;
     		.title{
@@ -872,14 +916,91 @@ a[data-readmore-toggle]{
 	display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-top: 4em;
+    position: relative;
+    bottom: -2.5em;
+    .price-icon{
+    	background-image: url('./img/sprite.png');
+    	height: 80px;
+	    width: 80px;
+	    background-repeat: no-repeat;
+	    background-size: 200px;
+	    background-position: 6% 66.5%;
+    }
     .title{
    		font-size: 1.4em;
+   		width: 250px;
+    	line-height: 1.3;
+    	padding-left: 0.5em;
    		.link{
    			color: #000;
     		font-weight: 600;
     		text-decoration: underline;
    		}
+    }
+}
+
+
+
+// ---------------------------
+// LOGO CAROUSEL -----------
+// ---------------------------
+
+.logoCarousel{
+	position: relative;
+	.owl-carousel{
+		.owl-wrapper-outer{
+			overflow: hidden !important;
+		}
+	}
+	.owl-pagination{
+		display: none;
+	}
+	.owl-theme .owl-controls .owl-buttons{
+		position: absolute;
+	    top: 3em;
+	    display: flex;
+	    justify-content: space-between;
+	    width: calc(~'100% + 8em');
+    	left: -4em;
+    	& > div{
+    		background-color: #fff;
+		    border: 2px solid rgba(0, 0, 0, 0.71);
+		    color: rgba(0, 0, 0, 0.82);
+		    opacity: 1;
+		    font-size: 1.6em;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    height: 30px;
+		    width: 30px;
+		    padding: 0;
+		    i{
+		    	margin: 0;
+		    }
+    	}
+	}
+}
+
+.row.logocar-row{
+	margin-top: 0;
+    margin-bottom: 2em;
+    & + .without-border{
+    	// border-top: 1px solid #ddd;
+
+    }
+}
+
+
+.row.logo-car-row{
+    margin-top: 0;
+    .wait-msg{
+		padding-top: 2em;
+		font-size: 1.3em;
+		font-family: roboto;
+		line-height: 1.5;
+		font-style: italic;
+		color: @brand-secondary;
+		opacity: 0.8;
     }
 }
 
@@ -896,11 +1017,12 @@ a[data-readmore-toggle]{
 		background-color: #002b4e;
     	color: #fff;
     	padding-top: 2em;
-    	padding-bottom: 2em;
+    	padding-bottom: 0em;
 	}
 }
 
 .contact-us{
+	position: relative;
 	.site-title,.contact-caption{
 		color: #fff;
 	}
@@ -961,10 +1083,113 @@ a[data-readmore-toggle]{
 		border: 0 !important;
 		border-bottom: 2px solid #f00 !important;
 	}
+	.contact-card{
+		position: absolute;
+	    bottom: 10%;
+	    right: -4em;
+	    width: 220px;
+	    padding: 2em;
+	    border: 2px solid @brand-primary;
+	    background-color: @brand-secondary;
+	    .gift{
+	    	background-image: url('./img/sprite.png');
+	    	height: 86px;
+		    width: 70px;
+		    margin: 0 auto;
+		    background-repeat: no-repeat;
+		    background-position: 80% 65%;
+		    background-size: 182px;
+		    margin-bottom: 0.5em;
+	    }
+	    .why-caption{
+	    	color: @brand-primary;
+    		margin-top: 0;
+    		font-size: 1.2em;
+    		text-align: center;
+    		font-weight: 400;
+    		.link{
+    			color: #dbc497;
+    			font-weight: 600;
+    			text-decoration: underline;
+    		}
+	    }
+	}
+}
+
+.contact-footer{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 6em;
+	& > div{
+		flex: 1 0 33.33%;
+		display: flex;
+		justify-content:center;
+	}
+	.con-icon{
+		background-image: url('./img/sprite.png');
+		height: 34px;
+	    width: 64px;
+	    background-repeat: no-repeat;
+	    background-position: 9% 75%;
+    	background-size: 225px;
+    	padding-right: 0.5em;
+    	&.phone{
+    		width: 36px;
+    		background-position: 31% 75%;
+    	}
+	}
+	.social-link{
+		position: static;
+		.title{
+			margin: 0;
+    		font-size: 1em;
+    		opacity: 0.6;
+		}
+		.socialIcons{
+			align-items: baseline;
+			.data{
+				padding: 0.4em 0.5em;
+				min-width: 20px;
+    			text-align: center;	
+    			.fa{
+    				font-size: 1.3em;
+    			}
+			}
+		}
+	}
+	.data{
+		color: @brand-primary;
+		font-family: roboto;
+		font-size: 1.25em;
+	}
+}
+
+.row.contact-row{
+	margin-bottom: 0;
+    border-bottom: 1px solid #024982;
+}
+
+
+#footer{
+	display: none;
 }
 
 
 
+// ---------------------------
+// COPYRIGHT -----------
+// ---------------------------
+
+#copyright-wrapper{
+	background-color: #002b4e;
+    padding: 3em 0 !important;
+}
+
+.normal-copyright #copyright-text{
+	float: none;
+    font-family: roboto;
+    font-size: 1.3em;
+}
 
 
 

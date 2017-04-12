@@ -57,11 +57,13 @@ function slideCarousel(){
 setTimeout(slideCarousel, 1000);
 
 
+
+
 // Readmore
 
 jQuery('.about-details').readmore({
    speed: 25,
-   collapsedHeight: 150,
+   collapsedHeight: 210,
    moreLink: '<a href="#" class="more">Show More <i class="fa fa-angle-down" aria-hidden="true"></i></a>',
    lessLink: '<a href="#">Less <i class="fa fa-angle-up" aria-hidden="true"></i></a>'
  });
